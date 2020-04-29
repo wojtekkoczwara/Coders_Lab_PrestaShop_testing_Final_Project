@@ -116,9 +116,10 @@ public class SearchAndOrderPage {
     }
 
     // Insert quantity
-    public void quantitySelection(String quantity){
+    public void quantitySelection(String quantity) throws InterruptedException {
         quantityInput.clear();
         quantityInput.sendKeys(quantity);
+        Thread.sleep(2000);
     }
 
     // Add product to cart
@@ -127,8 +128,9 @@ public class SearchAndOrderPage {
     }
 
     // Go instantly to checkout
-    public void goToCheckout(){
+    public void goToCheckout() throws InterruptedException {
         goToCheckoutButton.click();
+        Thread.sleep(2000);
     }
 
     // Choose address from Alias
