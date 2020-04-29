@@ -54,14 +54,14 @@ public class SearchAndOrder {
 
     // Select demanded size and quaintity (values delivered in cucumber script)
     @And("Choose keyword (.*) and keyword (.*)")
-    public void chooseSizeAndQuantity(String size, String quantity) {
+    public void chooseSizeAndQuantity(String size, String quantity) throws InterruptedException {
         searchAndOrderPage.sizeSelection(size);
         searchAndOrderPage.quantitySelection(quantity);
     }
 
     // add product to cart and go to checkout
     @And("Add to cart and go to checkout")
-    public void addToCartAndGoToCheckout() {
+    public void addToCartAndGoToCheckout() throws InterruptedException {
         searchAndOrderPage.addToCart();
         searchAndOrderPage.goToCheckout();
         searchAndOrderPage.goToCheckout();
